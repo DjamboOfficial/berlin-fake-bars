@@ -1,0 +1,24 @@
+<!-- index.hbs -->
+<h1>{{title}}</h1>
+
+{{#if currentUser}}
+  <!-- Elements for logged-in users -->
+  <nav>
+    <ul>
+      <li><a href="/">Index</a></li>
+      <li><a href="/random">Random Bar</a></li>
+      <li><a href="/search">Search by location</a></li>
+      <li><a href="/create-bar">Create bar</a></li>
+      <li><a href="/auth/logout">Logout</a></li>
+    </ul>
+  </nav>
+{{else}}
+  <!-- Elements for users who are not logged in -->
+  <p>Welcome to the site! Sign up or log in to access more features.</p>
+  <nav>
+    <ul>
+      <li><a href="/auth/login">Login</a></li>
+      <li><a href="/auth/signup">Signup</a></li>
+    </ul>
+  </nav>
+{{/if}}
