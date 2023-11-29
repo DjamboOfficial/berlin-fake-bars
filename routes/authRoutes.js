@@ -42,7 +42,7 @@ router.post("/login", (req, res) => {
         return;
       } else if (bcryptjs.compareSync(password, user.password)) {
         req.session.currentUser = user;
-        res.redirect("/user-profile");
+        res.redirect("/");
       } else {
         console.log("Incorrect password. ");
         res.render("auth/login", {
@@ -77,7 +77,7 @@ router.post("/signup", async (req, res) => {
     console.log("A new user was created: ", newUser);
 
     req.session.currentUser = newUser;
-    res.redirect("/user-profile");
+    res.redirect("/");
   } catch (error) {
     console.error(error);
     res.render("auth/signup", {

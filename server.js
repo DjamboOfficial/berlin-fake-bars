@@ -7,5 +7,5 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-  console.log(`Server is going on port ${PORT} `);
+  console.log(`Madafucken' server is killing it on port ${PORT} `);
 });

@@ -1,5 +1,5 @@
 <!-- index.hbs -->
-<h1>{{title}}</h1>
+<h1>🍹 Berlin Bar Fantasia 🍹</h1>
 
 {{#if currentUser}}
   <!-- Elements for logged-in users -->
@@ -14,11 +14,20 @@
   </nav>
 {{else}}
   <!-- Elements for users who are not logged in -->
-  <p>Welcome to the site! Sign up or log in to access more features.</p>
+  <p>Welcome to the site! Ready to access a world of wonder? </p>
   <nav>
     <ul>
       <li><a href="/auth/login">Login</a></li>
       <li><a href="/auth/signup">Signup</a></li>
     </ul>
   </nav>
+{{/if}}
+
+{{#if currentUser}}
+  <p>Welcome, {{currentUser.username}}!</p>
+  <p>Email: {{currentUser.email}}</p>
+{{else}}
+  <p>
+    😥 We would have logged you in, but no user information is available. Sign
+    up or log in, bidde bidde. 😥</p>
 {{/if}}

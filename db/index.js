@@ -7,7 +7,7 @@ mongoose
   .connect(MONGO_URI)
   .then((x) => {
     console.log(
-      `Connected to Mongo! Database name: "${x.connections[0].name}"`
+      `Hooked up to da' Mongo! Database mojo brojo name: "${x.connections[0].name}"`
     );
   })
   .catch((err) => {

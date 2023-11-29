@@ -3,6 +3,9 @@ const Bar = require("../models/bar"); // Update the path based on your project s
 
 require("../db");
 
+/* 
+In the gritty neon-lit labyrinth of Cyberpunk Berlin, the iconic TV Tower looms, casting an otherworldly glow. A cocktail signal pierces the inky sky, a mixologist's bat signal, a surreal beacon illuminating the hyperrealistic streets where the futuristic and the nocturnal collide in an intoxicating dance of light and shadows. */
+
 const seedDatabase = async () => {
   try {
     await Bar.deleteMany();
